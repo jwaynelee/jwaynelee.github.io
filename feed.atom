@@ -4,7 +4,7 @@
 	<id>http://jefflee.xyz/</id>
 	<title>Jeff Lee</title>
 	<rights>2017</rights>
-	<updated>2017-11-05T15:58:20Z</updated>
+	<updated>2017-11-06T13:23:00Z</updated>
 	<subtitle>The personal blog of Jeff Lee</subtitle>
 	<entry>
 		<link href="http://jefflee.xyz/posts/2017-subaru-casa-cycling-challenge-24-hours-on-the-test-track" />
@@ -279,6 +279,31 @@ The headwind was stiff as I came around the first curve, and I immediately regre
 &lt;p&gt;&lt;a href="https://www.strava.com/activities/829056775"&gt;Ride on Strava&lt;/a&gt;&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;The forecast called for warmer-than-usual temperatures and winds out of the south. I decided to try riding my new Wabi single-speed bike to Petersburg, a town on the Sangamon river, north of the state capital of Springfield. The plan was for Joy to drive up and meet me there, where we'd stay overnight at a lodge in town.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<link href="http://jefflee.xyz/posts/never-say-never-again-day-four" />
+		<link rel="enclosure" type="image" href="http://jefflee.xyz/images/never-say-never-again-day-four.jpeg" />
+		<id>http://jefflee.xyz/posts/never-say-never-again-day-four</id>
+		<title>Never Say Never Again, Day Four</title>
+		<updated>2016-10-01T00:00:00Z</updated>
+		<content>&lt;p&gt;Tired after the last few days of riding, I slept soundly in the dark basement of Michael and Tammy’s house.&lt;/p&gt;
+&lt;p&gt;It was drizzly and a little chilly, but I was up for a ride with Michael, and he even convinced Joy, who hadn’t ridden at all in a few months, to come along, after assuring her that it would “only be about 20 miles.”&lt;/p&gt;
+&lt;p&gt;The ride was nice, although a little trafficky at first, and the rain eventually slacked off.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src="/posts/images/never-say-never-again/day-four-1.jpeg" class="img-responsive center-block"/&gt;
+  &lt;figcaption&gt;Joy.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+  &lt;img src="/posts/images/never-say-never-again/day-four-2.jpeg" class="img-responsive center-block"/&gt;
+  &lt;figcaption&gt;Michael.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Joy’s suspicions about the tendency of all male bike riders to underestimate the length of rides were once again confirmed when Michael’s route ended up being 50% longer than promised.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/posts/images/never-say-never-again/day-four-3.jpeg" class="img-responsive center-block"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/posts/images/never-say-never-again/day-four-4.jpeg" class="img-responsive center-block"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;After a lazy afternoon that involved a nap for me in the dark basement, the four of us went to a great Indian restaurant for dinner.&lt;/p&gt;
+&lt;p&gt;The weather forecast looked promising for the next several days, so I decided to extend my mini-tour, and ride on to Kentucky beginning tomorrow.&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;Tired after the last few days of riding, I slept soundly in the dark basement of Michael and Tammy’s house.&lt;/p&gt;</summary>
 	</entry>
 	<entry>
 		<link href="http://jefflee.xyz/posts/never-say-never-again-day-three" />
