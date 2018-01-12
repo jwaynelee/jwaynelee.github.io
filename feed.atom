@@ -4,7 +4,8 @@
 	<id>http://jefflee.xyz/</id>
 	<title>Jeff Lee</title>
 	<rights>2018</rights>
-	<updated>2018-01-11T16:53:10Z</updated>
+	<updated>2018-01-12T02:06:05Z</updated>
+	<logo>http://jefflee.xyz/images/wabi-flowers.JPG</logo>
 	<subtitle>The personal blog of Jeff Lee</subtitle>
 	<entry>
 		<link href="http://jefflee.xyz/posts/first-century-of-2018" />
@@ -103,6 +104,7 @@ The headwind was stiff as I came around the first curve, and I immediately regre
 	</entry>
 	<entry>
 		<link href="http://jefflee.xyz/posts/a-first-attempt-at-touring-on-a-single-speed-day-five" />
+		<link rel="enclosure" type="image" href="http://jefflee.xyz/images/wabi-flowers.JPG" />
 		<id>http://jefflee.xyz/posts/a-first-attempt-at-touring-on-a-single-speed-day-five</id>
 		<title>A First Attempt at Touring on a Single-Speed, Day Five</title>
 		<updated>2017-04-22T00:00:00Z</updated>
