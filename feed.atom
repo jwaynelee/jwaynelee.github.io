@@ -4,18 +4,19 @@
 	<id>http://jefflee.xyz/</id>
 	<title>Jeff Lee</title>
 	<rights>2018</rights>
-	<updated>2018-01-13T15:50:35Z</updated>
+	<updated>2018-01-13T16:38:04Z</updated>
 	<logo>http://jefflee.xyz/images/wabi-flowers.JPG</logo>
 	<subtitle>The personal blog of Jeff Lee</subtitle>
 	<entry>
 		<link href="http://jefflee.xyz/posts/walking-in-nashville" />
-		<link rel="enclosure" type="image" href="http://jefflee.xyz/images/nashville-guitar.JPG" />
+		<link rel="enclosure" type="image" href="http://jefflee.xyz/images/nashville-guitar.jpg" />
 		<id>http://jefflee.xyz/posts/walking-in-nashville</id>
 		<title>Walking in Nashville, December 2016</title>
 		<updated>2018-01-13T00:00:00Z</updated>
-		<content>&lt;p&gt;Joy and I were in Nashville, Tennessee in late 2016, and I spent half a day walking around the city. I carried my now-retired Canon Digital Rebel DSLR, but never got around to doing anything with the photos until now.&lt;/p&gt;
+		<content>&lt;p&gt;We were in Nashville, Tennessee in late 2016, and I spent three or four hours one day walking around the city. I didn't have my bike with me on this trip, but I prefer walking to riding in big cities most of the time anyway.&lt;/p&gt;
+&lt;p&gt;I took some photos while I wandered at random around town, but except for a cursory inspection, I never did anything with them until today.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/posts/images/walking-in-nashville/IMG_6186.JPG" class="img-responsive center-block"/&gt;&lt;/img&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="/posts/images/walking-in-nashville/IMG_6192.JPG" class="img-responsive center-block"/&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;!-- &lt;img src="/posts/images/walking-in-nashville/IMG_6192.JPG" class="img-responsive center-block"/&gt;&lt;/img&gt; --&gt;
 &lt;p&gt;&lt;img src="/posts/images/walking-in-nashville/IMG_6196.JPG" class="img-responsive center-block"/&gt;&lt;/img&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="/posts/images/walking-in-nashville/IMG_6201.JPG" class="img-responsive center-block"/&gt;&lt;/img&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="/posts/images/walking-in-nashville/IMG_6207.JPG" class="img-responsive center-block"/&gt;&lt;/img&gt;&lt;/p&gt;
@@ -47,7 +48,7 @@
 &lt;p&gt;&lt;img src="/posts/images/walking-in-nashville/IMG_6290.JPG" class="img-responsive center-block"/&gt;&lt;/img&gt;&lt;/p&gt;
 &lt;iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/activities/814196315/embed/5a5e0aaf6cf2efc5f73548b13570b6a6d9724cf5'&gt;&lt;/iframe&gt;
 </content>
-		<summary>&lt;p&gt;Joy and I were in Nashville, Tennessee in late 2016, and I spent half a day walking around the city. I carried my now-retired Canon Digital Rebel DSLR, but never got around to doing anything with the photos until now.&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;We were in Nashville, Tennessee in late 2016, and I spent three or four hours one day walking around the city. I didn't have my bike with me on this trip, but I prefer walking to riding in big cities most of the time anyway.&lt;/p&gt;</summary>
 	</entry>
 	<entry>
 		<link href="http://jefflee.xyz/posts/first-century-of-2018" />
