@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<title>Search CycleBlaze</title>
+<!-- <link href="https://www.cycleblaze.com/assets/styles.css?v=50" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Merriweather:400,700,400italic,700italic" rel="stylesheet" type="text/css"> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch-helper@2.24.0/dist/algoliasearch.helper.min.js"></script
+</head>
+<body class='text-block'>
+<style>
+<!-- * { -->
+  <!-- font-family: 'helvetica', sans-serif; -->
+<!-- } -->
+
+.content-type {
+	display: table;
+}
+
+.content-title {
+	display: table;
+}
+
+.content-url {
+	display: table;
+}
+
+.content-snippet {
+	display: table;
+}
+
+#search-box {
+  margin: 1em 1em 3em;
+  width: calc(100% - 2em);
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+#container {
+  max-width: 150px;
+  width: 100%;
+  float: left;
+  padding: 0 1em;
+  margin: 0;
+  list-style: none;
+}
+
+#container {
+  max-width: calc(100% - 4em);
+}
+
+#container .hit {
+  padding: 8px 0;
+}
+
+</style>
+
+<input autocomplete="off" id="search-box" id="q" placeholder="Search..." type="text" spellcheck="false"/>
+
+<div class="hits-wrapper" id=container>
+  <h3><span id="results-header">Results</span></h3>
+  <div id="hits"></div>
+  <br>
+  <div id="pagination">
+	<a id='first-page' href='#'>First</a>
+	<a id='previous-page' href='#'>Previous</a>
+	<a id='next-page' href='#'>Next</a>
+	<a id='last-page' href='#'>Last</a>
+  </div>
+</div>
+
+<script>
+
+ // Algolia client. Mandatory to instantiate the Helper.
+var algolia = algoliasearch('ODTKY0RQS9', '214775945fb76f1b04edceeba62db21c');
+
+// Algolia Helper
+var helper = algoliasearchHelper(algolia, 'CycleBlaze', {
+  hitsPerPage: 5,
+  getRankingInfo: true
+});
+	
+$( document ).ready(function() {
+
+	$("#first-page").click(function() {
+		helper.setPage(0).search();
+	});
+	
+	$("#previous-page").click(function() {
+		var currentPage = helper.getPage();
+		if (currentPage > 0) {
+			helper.setPage(currentPage - 1).search();
+		}	
+	});
+	
+	$("#next-page").click(function() {
+		var currentPage = helper.getPage();
+		if (currentPage < helper.lastResults.nbPages - 1) {
+			helper.setPage(currentPage + 1).search();
+		}	
+	});
+	
+	$("#last-page").click(function() {
+		helper.setPage(helper.lastResults.nbPages - 1).search();
+	});
+	
+	$("#results-header").hide();
+	$("#first-page").hide();
+	$("#previous-page").hide();
+	$("#next-page").hide();
+	$("#last-page").hide();
+			
+	// Bind the result event to a function that will update the results
+	helper.on("result", searchCallback);
+
+	// The different parts of the UI that we want to use in this example
+	var $inputfield = $("#search-box");
+	var $hits = $('#hits');
+
+	// When there is a new character input:
+	// - update the query
+	// - trigger the search
+	$inputfield.keyup(function(e) {
+	  var searchTerm = $.trim($inputfield.val());
+	  
+	  console.log('"' + searchTerm + '"' );
+	  
+	  if (searchTerm === '') {
+			$("#results-header").hide();
+			$("#first-page").hide();
+			$("#previous-page").hide();
+			$("#next-page").hide();
+			$("#last-page").hide();
+			$hits.html("");
+	  } else {
+			helper.setQuery(searchTerm).search();
+	  }
+	  
+	});
+
+	// Trigger a first search, so that we have a page with results
+	// from the start.
+	//helper.search();
+
+	// Result event callback
+	function searchCallback(content) {
+	  if (content.hits.length === 0) {
+		// If there is no result we display a friendly message
+		// instead of an empty page.
+		$hits.empty().html("No results :(");
+		$("#results-header").hide();
+		$("#first-page").hide();
+		$("#previous-page").hide();
+		$("#next-page").hide();
+		$("#last-page").hide();
+		return;
+	  }
+
+		// Hits/results rendering
+	  renderHits($hits, content);
+	}
+
+	function renderHits($hits, results) {
+	
+	  $("#results-header").html(results.nbHits + " result" + (results.nbHits == 1 ? "" : "s"));
+	  
+	  var s = "";
+	  for (var i = 0; i < results.hits.length; ++i) {
+		  s += '<div class="search-result">';
+		  s += '<span class="content-type">Profile</span>';
+		  s += '<span class="content-title"><a href="https://www.cycleblaze.com/profile/' + results.hits[i].username + '/">' + results.hits[i]._snippetResult.fname.value + ' ' + results.hits[i]._snippetResult.lname.value + '</a></span>';
+		  s += '<span class="content-url"><a href="https://www.cycleblaze.com/profile/' + results.hits[i].username + '/">' + 'www.cycleblaze.com/profile/' + results.hits[i]._snippetResult.username.value  + '</a></span>';
+		  
+		  if (results.hits[i]._snippetResult.Profile.matchLevel !== "none") {
+			s += '<span class="content-snippet">' +  results.hits[i]._snippetResult.Profile.value + '</span>';
+		  }
+		  
+		  s += '</div>';
+		  s += '<br>';
+	  }
+	  
+	  $hits.html(s);
+	  
+	  if (results.hits.length > 0) {
+			$("#results-header").show();
+			
+			$("#first-page").show();
+			$("#previous-page").show();
+			$("#next-page").show();
+			$("#last-page").show();
+			if (results.page === 0) {
+				$("#first-page").hide();
+				$("#previous-page").hide();
+			}
+			if (results.page === results.nbPages - 1) {
+				$("#next-page").hide();
+				$("#last-page").hide();
+			}
+	  }else {
+			$("#results-header").hide();
+			$("#first-page").hide();
+			$("#previous-page").hide();
+			$("#next-page").hide();
+			$("#last-page").hide();
+	  }
+	}
+});
+
+
+</script>
+</body>
+</html>
